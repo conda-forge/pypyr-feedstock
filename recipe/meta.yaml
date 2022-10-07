@@ -1,5 +1,5 @@
 {% set name = "pypyr" %}
-{% set version = "5.4.0" %}
+{% set version = "5.5.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pypyr-{{ version }}.tar.gz
-  sha256: bb3d6b356ffdb14e5f7ff49eca94ec66443fef268c185d09345c859da15de434
+  sha256: 4ba7cee2f6d5a70b8c4dc4214012b0589e89abd9a6502de25b1d37b8bde01b8e
 
 build:
   number: 0
