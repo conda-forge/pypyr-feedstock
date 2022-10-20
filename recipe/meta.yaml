@@ -1,5 +1,5 @@
 {% set name = "pypyr" %}
-{% set version = "5.6.0" %}
+{% set version = "5.7.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pypyr-{{ version }}.tar.gz
-  sha256: 22bb5686cffe5036cbdda810222cebf4967a4dd5828e915db130116e37ecca6c
+  sha256: 96f7853fc970cbefd0d0d6760b5b4f3d80fd600ef4185e898340e540d08cb3d3
   folder: source
 
 build:
@@ -17,7 +17,7 @@ build:
   entry_points:
     - pypyr=pypyr.cli:main
   script: cd source/ && {{ PYTHON }} -m flit install --deps=none
- 
+
 requirements:
   host:
     - pip
