@@ -12,7 +12,7 @@ source:
   folder: source
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - pypyr=pypyr.cli:main
@@ -27,7 +27,7 @@ requirements:
     - python >=3.7
     - python-dateutil
     - ruamel.yaml
-    - tomli
+    - tomli >=1.1.0
     - tomli-w
 
 test:
