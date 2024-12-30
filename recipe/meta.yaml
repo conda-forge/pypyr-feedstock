@@ -7,12 +7,12 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pypyr-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pypyr-{{ version }}.tar.gz
   sha256: a87f8410acf41eb24e45ec57107269a043e6afff4170c7cef21b95497f0614ac
   folder: source
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - pypyr=pypyr.cli:main
@@ -21,10 +21,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - flit
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - python-dateutil
     - ruamel.yaml
     - tomli >=1.1.0
@@ -39,6 +39,7 @@ test:
     - pypyr --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypyr.io
